@@ -48,12 +48,13 @@ services:
 
   telegraf:
     container_name: telegraf
-    image: telegraf:alpine
+    image: telegraf
     volumes:
       - ./telegraf.conf:/etc/telegraf/telegraf.conf
     restart: always
     links:
       - influxdb
+      - mosquitto:mqtt
  
 volumes:
   grafana-db:
