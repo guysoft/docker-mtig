@@ -54,6 +54,7 @@ services:
     restart: always
     links:
       - influxdb
+      - mosquitto
  
 volumes:
   grafana-db:
