@@ -43,6 +43,8 @@ services:
       - grafana-db:/var/lib/grafana
       - grafana-log:/var/log/grafana
       - grafana-conf:/etc/grafana
+      - ./provisioning:/etc/grafana/provisioning
+      - ./dashboards:/var/lib/grafana/dashboards
     links:
       - influxdb
 
